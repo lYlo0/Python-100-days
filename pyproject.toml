@@ -1,0 +1,31 @@
+[project]
+name = "python-100-days"
+version = "0.1.0"
+description = "100 days of relearning Python, one small script a day."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+    "N",   # pep8-naming
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["days", "projects", "scripts"]
+python_files = ["test_*.py", "*_test.py"]
+# importlib mode lets every day have its own test_main.py without name clashes.
+addopts = "-ra --import-mode=importlib"

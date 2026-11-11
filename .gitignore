@@ -1,0 +1,61 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Scraped data and local databases ----
+data/
+*.csv
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- Secrets, cookies and accounts (never commit these) ----
+.env
+.env.*
+!.env.example
+# Patterns target data files only, so day folders like day012-account-manager/ stay tracked.
+*cookie*.txt
+*cookie*.json
+*cookie*.pkl
+*.cookies
+cookiejar
+*session*.json
+*session*.pkl
+*.session
+*account*.json
+*account*.txt
+*account*.ini
+*credential*.json
+*credentials*.txt
+*secret*.json
+*token*.json
+*token*.txt
+*.pem
+*.key

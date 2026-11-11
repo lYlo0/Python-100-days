@@ -1,0 +1,3 @@
+# Dev tooling only for now; libraries for later stages get added when they're needed.
+ruff>=0.17
+pytest>=9.2

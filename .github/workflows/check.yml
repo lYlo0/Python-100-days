@@ -1,0 +1,34 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Lint (ruff)
+        run: ruff check .
+
+      - name: Test (pytest)
+        # Exit code 5 means "no tests collected", which is fine early on.
+        run: |
+          set +e
+          pytest
+          code=$?
+          if [ "$code" -eq 5 ]; then
+            echo "No tests collected yet; treating as success."
+            exit 0
+          fi
+          exit "$code"
