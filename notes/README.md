@@ -2,6 +2,12 @@
 
 Gotchas, lessons learned and retrospectives that are worth keeping beyond a single day.
 
+## Stage plans
+
+Each stage gets a day-by-day plan written when that stage starts, named `plan-stageN.md`:
+
+- [Stage 1: Getting back into shape (Day 1–15)](plan-stage1.md)
+
 ## Gotcha notes
 
 One file per topic, e.g. `notes/encoding.md` or `notes/requests-timeouts.md`. Each entry follows
